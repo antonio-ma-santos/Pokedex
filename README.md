@@ -39,7 +39,7 @@ Antes de iniciar, você precisa ter [Git](https://git-scm.com) e [Node](https://
 
 ```bash
 # Clone this project
-$ git clone git@github.com:antonio-ma-santos/Pokedex.git
+$ git clone git@github.com:antonio-ma-santos/pokedex.git
 # Access
 $ cd pokedex
 # Install dependencies
