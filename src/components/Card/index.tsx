@@ -31,8 +31,7 @@ export function Card({ name, id, abilities, types, sprites, stats }: pokemonProp
   });
   
   return (
-    <Container types={types} >
-
+    <Container types={types}>
       <header>
         <header>
           {/* <p>{ name.replace(/(?:^|\s)\S/g, (a) => a.toUpperCase()) }</p> */}
@@ -43,14 +42,12 @@ export function Card({ name, id, abilities, types, sprites, stats }: pokemonProp
         </header>
 
         <ul>
-          {
-            types.map(({type}, index) => (
-              <li key={index}>
-                <img src={imgType[type.name]} alt={type.name} />
-                {type.name}
-              </li>
-            ))
-          }
+          {types.map(({type}, index) => (
+            <li key={index}>
+              <img src={imgType[type.name]} alt={type.name} />
+              {type.name}
+            </li>
+          ))}
         </ul>
 
         <div>
@@ -63,18 +60,15 @@ export function Card({ name, id, abilities, types, sprites, stats }: pokemonProp
 
       <Footer>
         <Status types={types}>
-          {
-            statsFiltered.map((stat, index) => (
-              <>
-                <p>{stat.stat.name}</p>
-                <span>{stat.base_stat}</span>
-                <div key={index}>
-                  <div style={{ width: `${stat.base_stat}%` }}>
-                  </div>
-                </div>
-              </>
-            ))
-          }
+          {statsFiltered.map((stat, index) => (
+            <>
+              <p>{stat.stat.name}</p>
+              <span>{stat.base_stat}</span>
+              <div key={index}>
+                <div style={{ width: `${stat.base_stat}%` }} />
+              </div>
+            </>
+          ))}
         </Status>
       </Footer>
     </Container>

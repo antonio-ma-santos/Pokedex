@@ -57,7 +57,7 @@ export const Container = styled.footer`
       }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 460px) {
       span {
         font-size: 0.8rem;
       }

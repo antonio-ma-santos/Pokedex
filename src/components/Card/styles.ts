@@ -17,7 +17,7 @@ export const Container = styled.div<cardProps>`
   background: ${({ types }) => backgroundType[types[0].type.name]};
   box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.2);
 
-  @media screen and (max-width: 600px){
+  @media (max-width: 460px){
     width: 15rem;
     height: 20rem;
   }
@@ -45,7 +45,7 @@ export const Container = styled.div<cardProps>`
       }
     }
 
-    @media (max-width: 600px){
+    @media (max-width: 460px){
       > header p {
         font-size: 1.3rem;
 
@@ -85,7 +85,7 @@ export const Container = styled.div<cardProps>`
           margin-right: 4px;
         }
 
-        @media (max-width: 600px){
+        @media (max-width: 460px){
           font-size: 0.8rem;
 
           img {
@@ -119,7 +119,7 @@ export const Container = styled.div<cardProps>`
         }
       }
 
-      @media (max-width: 600px){
+      @media (max-width: 460px){
         > img {
           height: 12rem;
           width: 12rem;
@@ -155,8 +155,11 @@ export const Footer = styled.footer`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 600px){
+  @media (max-width: 460px){
     height: 7.5rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: none;
   }
 `;
 
@@ -196,7 +199,7 @@ export const Status = styled.section<cardProps>`
     }
   }
 
-  @media (max-width: 600px){
+  @media (max-width: 460px){
     margin-top: 1rem;
     margin-left: 1.9rem;
     margin-right: 1.9rem;

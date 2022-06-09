@@ -13,7 +13,7 @@ export const Container = styled.div`
     animation: shake 0.5s alternate ease infinite;
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 460px) {
     img {
       width: 80px;
       height: 80px;

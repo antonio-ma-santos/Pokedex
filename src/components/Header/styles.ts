@@ -20,7 +20,7 @@ export const Content = styled.div`
     width: 70px;
     height: 70px;
 
-    @media (max-width: 720px){
+    @media (max-width: 460px){
       width: 60px;
       height: 60px;
     }
@@ -46,7 +46,7 @@ export const ContainerSelect = styled.div`
   top: 25px;
   right: 30px;
 
-  @media (max-width: 720px){
+  @media (max-width: 460px){
     display: none;
   }
 
