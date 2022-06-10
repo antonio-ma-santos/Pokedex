@@ -4,7 +4,7 @@
 
 > Site de catálogo de pokemons, mais conhecido como pokédex. Ele serve para listar todos os pokemons existentes atualmente.
 
-🗔 Confira a aplicação:  (link) <br>
+🗔 Confira a aplicação: https://pkdex-cards.netlify.app/ <br>
 
 ## :page_facing_up: Explicação
 
