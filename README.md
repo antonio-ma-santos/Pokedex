@@ -8,7 +8,7 @@
 
 ## :page_facing_up: Explicação
 
-O projeto foi desenvolvido utilizando o framework [ReactJS](https://pt-br.reactjs.org/docs/getting-started.html). O site faz a listagem através do consumo de uma API, possibilitando escolher quantos pokemons exibir por página, além de contar com paginação. 
+O projeto foi desenvolvido utilizando a biblioteca [ReactJS](https://pt-br.reactjs.org/docs/getting-started.html). O site faz a listagem através do consumo de uma API, possibilitando escolher quantos pokemons exibir por página, além de contar com paginação. 
 
 ## ⚔️ Desafio
 
