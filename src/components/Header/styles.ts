@@ -1,28 +1,86 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  background: #222;
-  width: 100%;
-  height: 6rem;
+  /* width: 100%;
+  height: 100px;
   position: relative;
+  background: #222;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  > svg {
+    width: 26px;
+    height: 26px;
+    color: #999;
+
+    position: absolute;
+    top: 34px;
+    left: 12px;
+
+    transition: color .3s;
+    
+    &:hover {
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  p {
+    color: #fff;
+    font-size: 1.2rem;
+
+    span {
+      color: #999;
+      font: 1rem;
+    }
+  } */
+
+  width: 100%;
+  height: 100px;
+  background: #222;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 15px;
+
+  > svg {
+    width: 26px;
+    height: 26px;
+    color: #999;
+
+    transition: color .3s;
+    
+    &:hover {
+      color: #fff;
+      cursor: pointer;
+    }
+  }
 `;
 
 export const Content = styled.div`
-  max-width: 1220px;
+  max-width: 300px;
+  height: 100%;
   margin: 0 auto;
-  padding: 2rem 2rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
+  a {
+    text-decoration: none;
+  }
+
   img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 
     @media (max-width: 460px){
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
     }
   }
 
@@ -33,6 +91,23 @@ export const Content = styled.div`
     span {
       color: yellow;
     }
+  }
+`;
+
+export const PokedexIcon = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  
+  img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+
+  span {
+    color: #bbb;
+    font: 1rem;
   }
 `;
 

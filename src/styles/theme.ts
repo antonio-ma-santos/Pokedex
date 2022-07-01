@@ -80,3 +80,24 @@ export const colorType = {
   water: '#4A90DA',
   ice: '#61CEC0',
 }
+
+export const typesArray = [
+  'normal',
+  'grass',
+  'poison',
+  'fire',
+  'flying',
+  'bug',
+  'ground',
+  'fairy',
+  'fighting',
+  'psychic',
+  'electric',
+  'steel',
+  'ghost',
+  'rock',
+  'dragon',
+  'dark',
+  'water',
+  'ice',
+]

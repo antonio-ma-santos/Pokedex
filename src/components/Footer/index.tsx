@@ -11,12 +11,13 @@ type pagesProps = {
 type footerProps = {
   next: () => void;
   prev: () => void;
+  count: number;
   pages: pagesProps;
   pageNumber: number;
   cardsPerPage: number;
 }
 
-export function Footer({ next, prev, pages, pageNumber, cardsPerPage }: footerProps) {
+export function Footer({ next, prev, count, pages, pageNumber, cardsPerPage }: footerProps) {
 
   return (
    <Container>
@@ -29,7 +30,7 @@ export function Footer({ next, prev, pages, pageNumber, cardsPerPage }: footerPr
          <FiArrowLeft />
        </button>
 
-       <span>página {pageNumber} / {(1228 / cardsPerPage).toFixed(0)}</span>
+       <span>página {pageNumber} / {(count / cardsPerPage).toFixed(0)}</span>
 
        <button 
          type="button" 

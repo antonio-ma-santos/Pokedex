@@ -1,6 +1,6 @@
 import { Card } from '../Card';
 
-import { statsProps, typeProps, abilitiesProps, spritesProps } from '../../App';
+import { statsProps, typeProps, abilitiesProps, spritesProps } from '../../types';
 
 import { Container } from './styles';
 
@@ -15,9 +15,10 @@ type pokemonInfo = {
 
 type pokemonsProps = {
   pokemons: pokemonInfo[];
+  activedFilter?: boolean;
 }
 
-export function ListPokemon({ pokemons }: pokemonsProps) {
+export function ListPokemon({ pokemons, activedFilter }: pokemonsProps) {
 
   return (
     <>
@@ -32,6 +33,7 @@ export function ListPokemon({ pokemons }: pokemonsProps) {
               abilities={pokemon.abilities}
               types={pokemon.types}
               stats={pokemon.stats}
+              activedFilter={activedFilter}
             />
           ))
         }

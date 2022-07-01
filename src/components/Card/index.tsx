@@ -1,9 +1,12 @@
 import { Container, Footer, Status } from './styles';
 
-import { pokemonProps } from '../../App';
-
 import pokeball from '../../assets/Pokeball.svg';
+
 import { imgType } from '../../styles/theme';
+import { pokemonProps } from '../../types';
+
+import { usePokedex } from '../../hooks/usePokedex'; 
+import { useModalContext } from '../../hooks/useModalContext';
 
 function leadingZero(number: string | number, size = 4) {
   let numberWithZeros = String(number);
@@ -15,7 +18,14 @@ function leadingZero(number: string | number, size = 4) {
   return numberWithZeros;
 }
 
-export function Card({ name, id, abilities, types, sprites, stats }: pokemonProps) {
+type cardProps = pokemonProps & {
+  activedFilter?: boolean;
+}
+
+export function Card({ name, id, abilities, types, sprites, stats, activedFilter }: cardProps) {
+
+  const { handleAction } = usePokedex();
+  const { setPokemonData, setIsModalOpen } = useModalContext();
 
   const statsNames = {
     hp: 'hp',
@@ -30,8 +40,25 @@ export function Card({ name, id, abilities, types, sprites, stats }: pokemonProp
     }
   });
   
+  function chooseAction() {
+    activedFilter ? handleAction(id) : handleOpenModal();
+  }
+
+  function handleOpenModal() {
+    setIsModalOpen(true);
+    setPokemonData({ name, id, abilities, types, sprites, stats });
+  }
+
+  function chooseActionTemp() {
+    handleAction(id);
+  }
+
   return (
-    <Container types={types}>
+    <Container 
+      types={types}
+      // onClick={() => chooseAction()}
+      onClick={() => chooseActionTemp()}
+    >
       <header>
         <header>
           {/* <p>{ name.replace(/(?:^|\s)\S/g, (a) => a.toUpperCase()) }</p> */}

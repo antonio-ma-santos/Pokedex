@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { darken } from "polished";
 
-import { typeProps } from '../../App';
+import { typeProps } from "../../types";
 
 import { backgroundType } from '../../styles/theme';
 import { colorType } from "../../styles/theme";
@@ -10,9 +10,10 @@ type cardProps = {
   types: typeProps[];
 }
 
-export const Container = styled.div<cardProps>`
+export const Container = styled.button<cardProps>`
   width: 20rem;
   height: 25rem;
+  border: none;
   border-radius: 1rem;
   background: ${({ types }) => backgroundType[types[0].type.name]};
   box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.2);
@@ -138,6 +139,7 @@ export const Container = styled.div<cardProps>`
   &:hover {
     transform: scale(1.06);
     box-shadow: 0 0 5px 8px ${({ types }) => darken(0.10, backgroundType[types[0].type.name])};
+    cursor: pointer;
   }
 `;
 
@@ -154,6 +156,8 @@ export const Footer = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  text-align: start;
 
   @media (max-width: 460px){
     height: 7.5rem;
